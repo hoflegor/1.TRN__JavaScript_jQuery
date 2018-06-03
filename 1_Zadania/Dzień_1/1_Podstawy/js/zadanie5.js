@@ -7,11 +7,11 @@ while (true < 100) {
 }
 
 var year = 2016;
-if(year %= 4) {
+if(year % 4 == 0) {
     console.log('Rok przestępny');
     else
     console.log('Rok nieprzestępny');
 }
 
 
-console.log('Błędy poprawione, więc ten tekst będę widzieć w konsoli po uruchomieniu skryptu'.' HURRRA!!!');
+console.log('Błędy poprawione, więc ten tekst będę widzieć w konsoli po uruchomieniu skryptu' + ' HURRRA!!!');
