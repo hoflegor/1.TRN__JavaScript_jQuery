@@ -8,40 +8,52 @@ String.prototype.upperLower = function () {
             newString += this[i].toUpperCase();
         }
     }
-    console.log(newString);
     return newString;
 };
 
-
-// var funnyText = "Smiesznie".upperLower();
-// var funnyTextWithSpace = "Javascript jest super".upperLower();
-
-const Car = {
-    color:"blue",
-    brand:"Kaszlak",
-    distance: 0,
-
-    printCarInfo: function () {
-        console.log(this.color, this.brand, this.distance);
-    },
-    drive: function (km) {
-        this.distance+=km;
-    }
-
+var Car = function (color,brand) {
+    this.color = color;
+    this.brand = brand;
+    this.distance = 0;
 };
 
-Car.review = ["2017.01.01", "2017.02.01", "2017.03.01", "2017.04.01"];
+Car.prototype.printCarInfo = function () {
+    console.log("Brand: "+this.brand);
+    console.log("Color: "+this.color);
+    console.log("Distance: "+this.distance);
+    console.log("Review: "+this.review);
+};
 
-Car.newReview=function (date){
-    Car.review.push(date);
+Car.prototype.drive = function(distance) {
+    this.distance += distance;
+};
+
+Car.prototype.printReviews = function () {
+    this.review.forEach(function (val) {
+        console.log(val);
+    })
+};
+
+var instance = new Car("red","Ferrari");
+
+instance.printCarInfo();
+instance.drive(100);
+instance.printCarInfo();
+
+var review = ["2017.01.01", "2017.02.01", "2017.03.01", "2017.04.01"];
+
+Car.prototype.review = function(array) {
+    this.review = array;
 }
 
-Car.showReviews = function(){
-    console.log(this.review);
+Car.prototype.newReview = function(date) {
+    this.date = date;
+    review.push(date);
 }
-
-
-Car.printCarInfo();
-console.log(Car.review);
-Car.newReview("2018.08.08");
-Car.showReviews();
+instance.review(review);
+instance.printCarInfo();
+instance.newReview("2017.05.01");
+instance.printCarInfo();
+instance.newReview("2017.06.01");
+instance.printCarInfo();
+instance.printReviews();

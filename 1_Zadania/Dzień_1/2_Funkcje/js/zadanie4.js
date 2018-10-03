@@ -1,25 +1,30 @@
 function calculateTip(amount, raiting) {
 
-    switch(raiting){
-        case 'Very good service':
-            console.log(0.25*amount);
-            break;
-        case 'Good service':
-            console.log(0.20*amount);
-            break;
-        case "Neutral service":
-            console.log(0.15*amount);
-            break;
-        case "Bad service":
-            console.log(0);
-            break;
-        default:
-            console.log('Opis nieczytelny');
+    if(raiting === "Very good service"){
+        return (amount * (25/100));
     }
+
+    if(raiting === "Good service"){
+        return (amount * (20/100));
+    }
+
+    if(raiting === "Neutral service"){
+        return (amount * (15/100));
+    }
+
+    if(raiting === "Bad service") {
+        return (amount * (0 / 100));
+    }
+
+    else{
+        return "Opis nieczytelny";
+    }
+
 
 }
 
-calculateTip(100, "Very good service");
-calculateTip(100, "Bad service");
-calculateTip(100, "Klawo");
-calculateTip(100, "Neutral service");
+console.log(calculateTip(100, "Very good service"));
+console.log(calculateTip(100, "Good service"));
+console.log(calculateTip(100, "Neutral service"));
+console.log(calculateTip(100, "Bad service"));
+console.log(calculateTip(100, "Nice"));

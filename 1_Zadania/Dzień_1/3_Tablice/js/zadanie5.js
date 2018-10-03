@@ -1,9 +1,9 @@
 function printTable(array){
-    for (let i = 0; i < array.length; i++) {
-        console.log(array[i]);
-    }
+    array.forEach(function (val) {
+        console.log(val);
+    })
 }
 
-const fruits = ["Figa", "Banan", "Jagoda", "kiwi", "Pigwa"];
+var creatures= ["vampire", "zombie", "werwolf", "striga"];
 
-printTable(fruits);
+printTable(creatures);

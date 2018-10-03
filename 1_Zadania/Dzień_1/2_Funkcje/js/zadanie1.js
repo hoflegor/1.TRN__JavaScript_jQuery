@@ -1,5 +1,12 @@
-function addNum(a,b,c){
-    return a+b+c;
+function sum(a,b,c) {
+    // metoda bez tablicy --->return a+b+c;
+    var sum = 0;
+    for (var i=0; i<arguments.length;i++){
+        sum+=arguments[i];
+    }
+    return sum;
 }
 
-console.log(addNum(2,4,6));
+// console.log(sum); --> metoda
+
+console.log(sum(2,4,8));

@@ -1,22 +1,16 @@
-var arr = [1960, 1999, 1970, 2010, 1988, 1987];
 
-function oldAndYoung(array)
-{
-    var presentYear = (new Date()).getFullYear();
-    var sortedArr = arr.sort(function(a, b){return a-b});
+var birthYear = [1980, 1975, 2000, 1999, 1995];
 
-    console.log(sortedArr);
-
-    var oldest = sortedArr.shift();
-    var youngest = sortedArr.pop();
-    var youngAge = presentYear - youngest;
-    var oldAge = presentYear - oldest;
-
-    console.log("najstarszy rocznik to: " + oldest
-        + " ma on " + oldAge + "lat");
-
-    console.log("najmłodszy rocznik to: " + youngest
-        + " ma on " + youngAge + "lat");
+function age(array) {
+    var year = new Date().getFullYear();
+    console.log(year);
+    var oldest = array[0];
+    for (var i=1; i<array.length; i++) {
+        if (array[i] < oldest) {
+            oldest = array[i];
+        }
+    }
+    console.log("Rok uroszenia najstarszej osoby to: " + oldest + " a jej wiek to: " + (year - oldest));
 }
 
-oldAndYoung(arr);
+age(birthYear);

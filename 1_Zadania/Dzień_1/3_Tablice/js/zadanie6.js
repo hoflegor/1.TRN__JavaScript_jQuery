@@ -1,20 +1,25 @@
-function factors(someDigit){
+function factors(num) {
 
-    var divisors = [];
-    for (var i = 1; i <= Math.sqrt(someDigit); i++) {
-        if (someDigit % i === 0) {
-            divisors.push(i);
-            if (i !== Math.sqrt(someDigit)) {
-                divisors.push(someDigit / i);
-            }
-        }
+    if(!num>0){
+        console.log('num must be larger than 0');
+        return;
     }
 
-    return divisors.sort(function (a,b) {return b-a;});
+    var count=0;
+    var arrFactors = [];
+    for (var i=1; i<=num; i++){
+        if (num % i == 0) {
+            // console.log(i);
+            arrFactors.push(i);
+            count++;
+        }
 
+        arrFactors.reverse();
+    }
+    console.log("Ilość dzielników: "+count);
+
+    console.log(arrFactors);
 }
 
-console.log(factors(2));
-console.log(factors(54));
-console.log(factors(-4));
+console.log(factors(666));
 console.log(factors(0));
