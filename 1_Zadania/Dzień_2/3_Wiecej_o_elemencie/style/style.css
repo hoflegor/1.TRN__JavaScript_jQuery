@@ -45,8 +45,8 @@
     position: relative;
 }
 
-.ex5 .menuElement.error {
-    background-color: red;
+.error {
+    color: red;
 }
 
 .ex5 .menuElement.selected {
