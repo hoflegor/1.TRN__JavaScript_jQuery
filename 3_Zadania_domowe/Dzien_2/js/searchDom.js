@@ -1,7 +1,9 @@
     // --->ZADANIE 1
 
-    var menu = document.getElementById("menu");
-    // console.log(menu);
+    console.log(">>--ZADANIE 1--<<");
+    //
+    // var menu = document.getElementById("menu");
+    console.log(menu);
 
     function getDataInfo(element) {
 
@@ -19,6 +21,7 @@
 
 
     // --->ZADANIE 2
+    console.log("\n\n>>--ZADANIE 2--<<");
 
     var mc = document.getElementById("main-contener");
    // console.log(mc);
@@ -44,6 +47,8 @@
 
    // --->ZADANIE 3
 
+    console.log("\n\n>>--ZADANIE 3--<<");
+
     var pc = document.querySelector(".pink-color");
 
     // console.log(pc);
@@ -58,6 +63,8 @@
 
 
     // --->ZADANIE 4
+
+    console.log("\n\n>>--ZADANIE 4-<<");
 
     var images = document.querySelectorAll(".images")
     console.log("images");
@@ -80,6 +87,9 @@
 
     // --->ZADANIE 5
 
+    console.log("\n\n>>--ZADANIE 5--<<");
+
+
     var myLink = document.querySelectorAll(".my-link");
     // console.log(myLink);
 
@@ -95,7 +105,9 @@
 
     }
 
-    console.log(myLink);
+
+
+    console.log(getElementHref(myLink));
 
 
 
