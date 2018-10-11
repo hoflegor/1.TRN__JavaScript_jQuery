@@ -1,3 +1,17 @@
-/**
- * Created by Jacek on 2016-01-12.
- */
+document.addEventListener('DOMContentLoaded', function () {
+
+    // console.log('ok');
+
+    var btn = document.querySelector('#mainBtn');
+    
+    console.log(btn);
+
+    function clickBtn(){
+        console.log("Hura! Działa!");
+    }
+    
+    btn.addEventListener('click', function () {
+        clickBtn();
+    })
+    
+});
